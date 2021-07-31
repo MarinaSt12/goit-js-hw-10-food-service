@@ -1,3 +1,5 @@
-import './js/card-code.js';
+import './js/gallery-food';
+
 import '/styles.css';
-import './js/checkbox.js';
+
+import './js/local-storage.js';

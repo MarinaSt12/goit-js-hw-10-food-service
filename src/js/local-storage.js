@@ -1,11 +1,11 @@
-const refs = {
-  checkbox: document.querySelector('#theme-switch-toggle'),
-  body: document.querySelector('body'),
-};
-
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
+};
+
+const refs = {
+  checkbox: document.querySelector('#theme-switch-toggle'),
+  body: document.querySelector('body'),
 };
 
 currentCheckTheme();
@@ -13,9 +13,9 @@ checkboxPosition();
 
 refs.checkbox.addEventListener('change', onBlackWhite);
 
-function onBlackWhite(e) {
+function onBlackWhite(evt) {
   const checkTheme = localStorage.getItem('Theme');
-  if (e.target.checked) {
+  if (evt.target.checked) {
     localStorage.setItem('Theme', Theme.DARK);
     refs.body.classList.add(Theme.DARK);
   } else {
