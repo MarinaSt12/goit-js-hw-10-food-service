@@ -18,8 +18,10 @@ function onBlackWhite(evt) {
   if (evt.target.checked) {
     localStorage.setItem('Theme', Theme.DARK);
     refs.body.classList.add(Theme.DARK);
+    refs.body.classList.remove(Theme.LIGHT);
   } else {
     localStorage.setItem('Theme', Theme.LIGHT);
+    refs.body.classList.add(Theme.LIGHT);
     refs.body.classList.remove(Theme.DARK);
   }
 }
